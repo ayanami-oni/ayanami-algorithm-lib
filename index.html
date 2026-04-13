@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>算法学习笔记库</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- docsify 主题样式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css">
+  <!-- 自定义样式：侧边栏在左边 + 链接无蓝色无下划线 -->
+  <style>
+    /* 固定侧边栏在左侧 */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 260px;
+      border-right: 1px solid #eaecef;
+      background: #ffffff;
+      overflow-y: auto;
+      z-index: 100;
+    }
+    /* 内容区左边留间距，不被侧边栏挡住 */
+    .content {
+      margin-left: 280px;
+      padding: 20px 40px;
+      max-width: 1000px;
+    }
+    /* 侧边栏链接：无蓝色、无下划线 */
+    .sidebar a {
+      color: #24292e !important; /* 继承正文颜色，不是蓝色 */
+      text-decoration: none !important;
+    }
+    /* 鼠标悬浮时变蓝，提示可点击 */
+    .sidebar a:hover {
+      color: #0366d6 !important;
+      text-decoration: underline !important;
+    }
+    /* 移动端适配，小屏幕侧边栏自动靠上 */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eaecef;
+      }
+      .content {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: '算法学习笔记库', // 左上角标题
+      repo: '', // 可以留空，不影响
+      loadSidebar: true, // 关键：开启左侧侧边栏
+      subMaxLevel: 3, // 侧边栏目录折叠深度（支持3级）
+      homepage: 'README.md', // 默认首页
+      mergeSidebar: true, // 合并侧边栏，自动折叠
+      alias: {
+        // 可选：解决路径中文编码问题，这里不用改
+        '^/算法文件/(.*)': '/算法文件/$1'
+      }
+    }
+  </script>
+  <!-- docsify 核心脚本 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+</body>
+</html>
