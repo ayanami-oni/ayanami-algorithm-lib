@@ -1,0 +1,10 @@
+# Jekyll 基础配置（GitHub Pages 自动识别）
+title: 算法学习库
+description: 图论&算法笔记
+theme: minima # 官方默认主题，稳定不报错
+baseurl: "/算法学习库" # 你的仓库名，必须写对！
+url: "https://你的GitHub用户名.github.io"
+
+# 开启目录导航
+plugins:
+  - jekyll-feed
