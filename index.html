@@ -1,41 +1,21 @@
-<<!DOCTYPE html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>算法学习库</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 主题 -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <title>我的算法库</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
   <div id="app"></div>
 
   <script>
     window.$docsify = {
-      name: '算法学习库',
-      repo: 'https://github.com/ayanami-oni/ayanami-algorithm-lib', // 这里改成你自己的仓库地址
-      loadSidebar: true,
-      subMaxLevel: 3,
-      auto2top: true,
-      homepage: 'README.md',
-      coverpage: false,
-      search: {
-        maxAge: 86400000,
-        paths: 'auto',
-        placeholder: '搜索笔记...',
-        noData: '找不到结果',
-        depth: 3
-      }
+      loadSidebar: true,  // 开启侧边栏（必须写）
+      homepage: 'README.md' // 首页显示README（必须写）
     }
   </script>
 
-  <!-- Docsify 核心 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <!-- 搜索插件 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <!-- 代码复制 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-  <!-- 缩放图片 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 只加载核心，不加任何插件，避免出错 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
 </body>
 </html>
